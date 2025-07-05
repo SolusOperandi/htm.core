@@ -21,7 +21,7 @@
 #  header-only, no build.
 include(FetchContent)
 
-set(dependency_url "https://github.com/SolusOperandi/digestpp/archive/refs/heads/main.zip")
+set(dependency_url "https://github.com/kerukuro/digestpp/archive/refs/heads/master.zip")
 set(local_override "${CMAKE_SOURCE_DIR}/build/Thirdparty/digestpp")
 
 # Check if local path exists and if so, use it as-is.
