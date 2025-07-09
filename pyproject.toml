@@ -97,6 +97,11 @@ sdist.include = ["build/Thirdparty", "build/Release"]   # for external dependenc
 [tool.setuptools.package-data]
 htm = ["data/mnist/*"]
 
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["htm*"]
+namespaces = true
+
 		   
 
 

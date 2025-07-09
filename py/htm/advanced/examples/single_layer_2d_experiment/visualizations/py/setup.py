@@ -19,13 +19,13 @@
 # http://numenta.org/licenses/
 # ----------------------------------------------------------------------
 
-from setuptools import find_packages, setup
+from setuptools import find_namespace_packages, setup
 
 setup(
     name="htmresearchviz0",
     version="0.0.1",
     description="",
-    packages=find_packages(),
+    packages=find_namespace_packages(include=["htmresearchviz0*"]),
     package_data={
         "htmresearchviz0": [
             "htmresearchviz0/package_data/*",
