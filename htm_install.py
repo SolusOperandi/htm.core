@@ -63,8 +63,9 @@ def main():
         import toml
     else:
         import tomllib as toml
-    with open("pyproject.toml", "rb") as f:
-        pyproject = toml.load(f)
+    # Use toml.load with the file path so it handles opening in text mode.
+    # Using binary mode causes a TypeError on some versions of toml/tomllib.
+    pyproject = toml.load("pyproject.toml")
         
     project_version = pyproject["project"]["version"]
     print(f"Version: {project_version}")
